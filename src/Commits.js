@@ -59,18 +59,19 @@ const Commits = ({thisRepo, getRepos}) => {
 									</h3>
 									<div className="secondary-commit">
 										<p className="commit-info">
-											<span>Committer: </span>
+											<span className="mini-title">Committer: </span>
 											{commit.author === null
 												? "No Username Listed"
 												: commit.author.login}
 										</p>
 
 										<p className="commit-info">
-											<span>Commit Hash: </span> {commit.sha}
+											<span className="mini-title">Commit Hash: </span>{" "}
+											{commit.sha}
 										</p>
 
 										<p className="commit-info">
-											<span>Commited On:</span>{" "}
+											<span className="mini-title">Commited On:</span>{" "}
 											{new Date(commit.commit.author.date).toDateString()}
 										</p>
 									</div>

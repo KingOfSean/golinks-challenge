@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 const Home = ({repoData}) => {
 	return (
 		<div className="main-content">
-			<h1>Repo Catcher</h1>
+			<h1 className="main-title">Repo Catcher</h1>
 
 			<div className="repo-list">
 				{repoData
@@ -16,17 +16,16 @@ const Home = ({repoData}) => {
 									<p>Writen in {repo.language}</p>
 									<p className="description">{repo.description}</p>
 									<div className="secondary-info">
-										{/* <p>
-											<span>Branch:</span> {repo.default_branch}
-										</p> */}
-										<p>
-											<span>Forks:</span> {repo.forks_count}
+										<p className="mini-info">
+											<span className="mini-title">Forks:</span>{" "}
+											{repo.forks_count}
 										</p>
-										<p>
-											<span>Followers:</span> {repo.stargazers_count}
+										<p className="mini-info">
+											<span className="mini-title">Followers:</span>{" "}
+											{repo.stargazers_count}
 										</p>
-										<p>
-											<span>Created:</span>{" "}
+										<p className="mini-info">
+											<span className="mini-title">Created:</span>{" "}
 											{new Date(repo.created_at).toDateString()}
 										</p>
 									</div>
