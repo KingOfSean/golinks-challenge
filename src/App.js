@@ -30,11 +30,7 @@ function App() {
 
 	const getRepos = async () => {
 		try {
-			const res = await fetch(`https://api.github.com/orgs/Netflix/repos`, {
-				headers: {
-					Authorization: "token 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",
-				},
-			});
+			const res = await fetch(`https://api.github.com/orgs/Netflix/repos`);
 			const data = await res.json();
 			setRepoData(data);
 			console.log(data);

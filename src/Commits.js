@@ -10,11 +10,6 @@ const Commits = ({thisRepo, getRepos}) => {
 		try {
 			const res = await fetch(
 				`https://api.github.com/repos/Netflix/${obj.name}/branches/${obj.default_branch}`,
-				{
-					headers: {
-						Authorization: "token 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",
-					},
-				},
 			);
 			const data = await res.json();
 			setBranchData(data.commit.sha);
@@ -29,11 +24,6 @@ const Commits = ({thisRepo, getRepos}) => {
 		try {
 			const res = await fetch(
 				`https://api.github.com/repos/Netflix/${thisRepo.name}/commits`,
-				{
-					headers: {
-						Authorization: "token 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",
-					},
-				},
 			);
 			const data = await res.json();
 			setCommitData(data);
