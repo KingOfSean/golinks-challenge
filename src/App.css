@@ -39,11 +39,20 @@
 }
 
 .branch-name {
-	font-size: 120px;
+	font-size: 75px;
 	text-transform: capitalize;
 	font-family: "Fjalla One", sans-serif;
 	color: white;
 }
+
+.search-name {
+	font-size: 120px;
+	text-transform: capitalize;
+	font-family: "Fjalla One", sans-serif;
+	color: white;
+	margin-bottom: 0px;
+}
+
 .repo {
 	width: 350px;
 	display: flex;

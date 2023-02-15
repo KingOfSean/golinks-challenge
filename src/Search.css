@@ -17,3 +17,7 @@
 	border-radius: 10px;
 	border: none;
 }
+
+.search-button:hover {
+	cursor: pointer;
+}

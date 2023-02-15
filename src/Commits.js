@@ -40,7 +40,7 @@ const Commits = ({thisRepo, searchRepo}) => {
 					onClick={() => handleScroll(mainContent)}
 				></div>
 			</div>
-
+			<h1 className="search-name">{searchRepo}</h1>
 			<h1 className="branch-name">{thisRepo.name}</h1>
 
 			<div className="commit-list">
