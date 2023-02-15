@@ -1,0 +1,36 @@
+.repo-list {
+	display: grid;
+	justify-items: center;
+	align-content: space-evenly;
+	align-items: baseline;
+	gap: 50px;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: auto;
+}
+
+.branch-name {
+	text-transform: capitalize;
+}
+.repo {
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+.repo-name {
+	text-transform: capitalize;
+}
+
+.description {
+	width: 90%;
+	text-align: center;
+	font-style: italic;
+}
+
+.secondary-info {
+	width: 85%;
+}
