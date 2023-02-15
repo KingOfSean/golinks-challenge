@@ -1,8 +1,23 @@
 import {Link} from "react-router-dom";
+import React, {useRef} from "react";
 
 const Home = ({repoData}) => {
+	const mainContent = useRef();
+
+	const handleScroll = (ref) => {
+		window.scrollTo({
+			behavior: "smooth",
+			top: ref.current.offsetTop,
+		});
+	};
 	return (
-		<div className="main-content">
+		<div ref={mainContent} className="main-content">
+			<div className="scroll-up">
+				<div
+					className="arrow right"
+					onClick={() => handleScroll(mainContent)}
+				></div>
+			</div>
 			<h1 className="main-title">Repo Catcher</h1>
 
 			<div className="repo-list">
