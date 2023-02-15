@@ -2,24 +2,25 @@ import React, {useState, useEffect, useRef} from "react";
 import {Link} from "react-router-dom";
 import "./Commits.css";
 
-const Commits = ({thisRepo}) => {
+const Commits = ({thisRepo, searchRepo}) => {
 	const [commitData, setCommitData] = useState([]);
 
 	const getCommits = async () => {
 		try {
 			const res = await fetch(
-				`https://api.github.com/repos/Netflix/${thisRepo.name}/commits`,
+				`https://api.github.com/repos/${searchRepo}/${thisRepo.name}/commits`,
 			);
+			console.log(searchRepo);
 			const data = await res.json();
 			setCommitData(data);
-			console.log(data);
+			// console.log(data);
 		} catch (error) {
 			console.log(error);
 		}
 	};
 
 	useEffect(() => {
-		getCommits();
+		getCommits(searchRepo, thisRepo);
 	}, []);
 
 	const mainContent = useRef();
