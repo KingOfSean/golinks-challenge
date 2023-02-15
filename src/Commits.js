@@ -12,7 +12,7 @@ const Commits = ({thisRepo, getRepos}) => {
 				`https://api.github.com/repos/Netflix/${obj.name}/branches/${obj.default_branch}`,
 				{
 					headers: {
-						Authorization: "token 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",
+						Authorization: "token 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",
 					},
 				},
 			);
@@ -31,7 +31,7 @@ const Commits = ({thisRepo, getRepos}) => {
 				`https://api.github.com/repos/Netflix/${thisRepo.name}/commits`,
 				{
 					headers: {
-						Authorization: "token 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",
+						Authorization: "token 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",
 					},
 				},
 			);
@@ -62,9 +62,10 @@ const Commits = ({thisRepo, getRepos}) => {
 							<div className="commit-item" key={commit.sha}>
 								<div className="commit-items">
 									<h3 className="message">
-										{commit.author.login === "dependabot[bot]"
+										{(commit.author === null || commit.author.login) ===
+										"dependabot[bot]"
 											? "Made by a Bot"
-											: commit.commit.message}{" "}
+											: commit.commit.message}
 									</h3>
 									<div className="secondary-commit">
 										<p className="commit-info">

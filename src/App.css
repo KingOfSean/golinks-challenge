@@ -34,3 +34,7 @@
 .secondary-info {
 	width: 85%;
 }
+
+a {
+	text-decoration: none;
+}

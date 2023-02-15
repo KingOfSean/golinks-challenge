@@ -32,7 +32,7 @@ function App() {
 		try {
 			const res = await fetch(`https://api.github.com/orgs/Netflix/repos`, {
 				headers: {
-					Authorization: "token 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",
+					Authorization: "token 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",
 				},
 			});
 			const data = await res.json();
