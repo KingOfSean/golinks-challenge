@@ -45,7 +45,7 @@ const Home = ({repoData, handleChange, handleSubmit, searchRepo, request}) => {
 								<Link className="repo-link" to={`${repo.name}`} key={repo.id}>
 									<div className="repo">
 										<h2 className="repo-name">{repo.name} </h2>
-										<p>Writen in {repo.language}</p>
+										<p className="mini-info">Writen in {repo.language}</p>
 										<p className="description">{repo.description}</p>
 										<div className="secondary-info">
 											<p className="mini-info">
