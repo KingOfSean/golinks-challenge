@@ -131,3 +131,18 @@ a:hover {
 	margin-top: 15px;
 	transform: rotate(-137deg);
 }
+
+@media screen and (max-width: 680px) {
+	.repo-list {
+		grid-template-columns: repeat(1, auto);
+	}
+
+	.main-title {
+		text-align: center;
+	}
+
+	.scroll-up {
+		left: 40%;
+		top: 85%;
+	}
+}
